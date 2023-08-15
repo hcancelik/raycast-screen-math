@@ -2,8 +2,8 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "screen-math",
   "title": "Screen Math",
-  "description": "Perform rapid calculations using numbers within your chosen screen area",
-  "icon": "command-icon.png",
+  "description": "Perform rapid calculations using numbers on your screen",
+  "icon": "screen-math.png",
   "author": "hcancelik",
   "categories": [
     "Productivity"
@@ -12,7 +12,7 @@
   "commands": [
     {
       "name": "sum-numbers",
-      "title": "Sum Numbers",
+      "title": "Sum Numbers On Screen",
       "description": "Sum the numbers in selected area",
       "mode": "view"
     }
@@ -30,6 +30,7 @@
   },
   "scripts": {
     "build": "ray build -e dist",
+    "build-swift": "swift build --configuration=release --arch arm64 --arch x86_64 && mv .build/apple/Products/Release/screen-math assets",
     "dev": "ray develop",
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
